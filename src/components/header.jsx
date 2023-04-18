@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { MenuItem } from './menu-item'
 import { AiFillHome } from "react-icons/ai";
 import { BsInfoCircleFill } from "react-icons/bs";
+import DarkModeSwitch from './darkModeSwitch';
+
 const Header = () => {
   return (
     <div className='flex flex-row w-[85%] mx-auto items-center justify-between'>
@@ -10,8 +12,8 @@ const Header = () => {
             <MenuItem title='HOME' address= '/' Icon={AiFillHome}/>
             <MenuItem title='ABOUT' address= '/about' Icon={BsInfoCircleFill}/>
         </div>
-        <div className='flex'>
-         <div></div>
+        <div className='flex items-center space-x-3'>
+         <DarkModeSwitch/>
          <Link href='/'>
            <div className='flex items-center tracking-wider'>
              <span className='p-2 py-1 px-3 rounded-lg bg-amber-500 font-bold text-2xl'>IMDb</span>

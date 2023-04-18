@@ -1,22 +1,21 @@
 import './globals.css'
-// import Head from '@/app/head'
+import Providers from './providers'
 import Header from '@/components/header'
 
-// export const metadata = {
-//   title:,
 
-// }
 
 export default function RootLayout({ children }) {
   return (
     <>
     <html lang="en">   
       <body>
+        <Providers>
         {/* header */}
         <Header/>
         {/* navbar */}
         {/* searchbox */}
         {children}
+        </Providers>
       </body>
     </html>
     </>
