@@ -14,15 +14,17 @@ export default async function Home({searchParams}) {
 
   const result = await response.json();
   const data = result.results;
-  //console.log(data)
+  console.log(data)
  
   return (
-    <div className="">
-      <h1 className='bg-amber-500 text-center text-slate-700 text-3xl font-bold'>Hello World</h1>
-      {data.map((movie)=> <Movie id={movie.id} 
-      title={movie.title}
-      overview={movie.overview}
-      />)}
+    <div className="grid w-[85%] mx-auto">
+      <h1 className='bg-amber-500 text-center text-slate-700 text-2xl md:text-4xl font-bold py-4 tracking-widest'>Your Movie Collection</h1>
+      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 mt-8 p-y-4 gap-6'>
+      {data.map((movie)=>    
+        <Movie movieItem = {movie}
+      />
+      )}
+      </div>
     </div>
   )
 }
