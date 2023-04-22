@@ -14,7 +14,7 @@ export default async function Home({searchParams}) {
 
   const result = await response.json();
   const data = result.results;
-  console.log(data)
+  //console.log(data)
  
   return (
     <div className="grid w-[85%] mx-auto">
