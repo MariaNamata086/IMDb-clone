@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react'
-// the link tag in the movie.jsx component pecifies a URL with an id, which we get from the params prop and pass into the fetch movie function
+// the link tag in the movie.jsx component specifies a dynamic URL with an id, which we get from the params prop and pass into the fetch movie function
 async function fetchMovie(movieId){
   const API_KEY = process.env.API_KEY;
   const response = await fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${API_KEY}`)
