@@ -17,8 +17,9 @@ async function SearchPage({params}) {
   return (
     <div className=' grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 mt-8 p-y-4 gap-6'>
         {searchData && searchData.length === 0 && (<h1 className='text-center pt-10'>No results found</h1>)}
-    { searchData && searchData.map((item)=>    
-        <Movie movieItem={item}/>) }
+    { searchData && searchData.map((item)=> <div key={item.id}>   
+        <Movie movieItem={item}/>
+        </div>) }
     </div>
   )
 }
